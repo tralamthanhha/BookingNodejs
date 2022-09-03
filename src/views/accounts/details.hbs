@@ -1,0 +1,16 @@
+<div class="info">
+fullname: {{data.fullname}}
+<br>
+location: {{data.location}}
+</div>
+{{data?.kind && 'seller'}}
+kind: {{data.kind}}
+<a href="/products/addStays">Add Stays</a>
+<a href="/products/tickets">Add Tickets</a>
+<a href="/products/transports">Add Transports</a>
+
+{{else}}
+kind: {{data.kind}}
+<a href="cart">Cart</a>
+<a href="/products/invoice">Invoice</a>
+{{/if}}

@@ -1,0 +1,92 @@
+<form method="post"action="/stays">
+	<div class="question">
+		<i class="fa fa-child"></i>
+		<label>Children: </label>
+		<input type="number" name="children"class="input"placeholder="children">
+		<i class="fa fa-male"></i>
+		<label>Adults:</label>
+		<input type="number" name="adults"class="input"placeholder="adults">
+		<i class="fa fa-bed"></i>
+		<label>Rooms:</label>
+		<input type="number" name="rooms"class="input"placeholder="rooms">
+		<label>From:</label>
+		<input type="date"name="fromDate"class="input">
+		<label>To:</label>
+		<input type="date"name="toDate"class="input">
+	</div>
+	{{!-- <div class="select">
+		
+	</div> --}}
+<div class="search-box">
+	<br>
+		<select class="select" name="type">
+			<option value="hotel">Hotel</option>
+			<option value="homestay">Homestay</option>
+			<option value="villa">Villa</option>
+			<option value="guest house">Guest house</option>
+			<option value="resort">Resort</option>
+			<option value="apartment">Apartment</option>
+		</select>
+	<input type="text" class="search-input" placeholder="Search..">
+	<button class="search-button">
+		<i class="fas fa-search"></i>
+	</button>
+</div>
+
+
+</form>
+	
+	<div class="content">
+		<h1><center>Stays</center></h1>
+		<div class="row">
+			<div class="col">
+				<a href="/hotel">
+					<img src="/img/hotel.png">
+					<h3>Hotels:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+			<div class="col">
+				<a href="/homestay">
+					<img src="/img/homestay.jpg">
+					<h3>Homestay:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+			<div class="col">
+				<a href="/guest-house">
+					<img src="/img/guest.png">
+					<h3>Guest house:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<a href="/resort">
+					<img src="/img/resort.png">
+					<h3>Resort:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="/villa">
+					<img src="/img/villa.png">
+					<h3>Villa:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="/apartment">
+					<img src="/img/apartment.png">
+					<h3>Apartment:</h3>
+					<h4>123</h4>
+				</a>
+			</div>
+
+		</div>
+		
+</div>
+</div>
