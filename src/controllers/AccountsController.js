@@ -49,6 +49,7 @@ const accountController={
                 {
                     req.session.fullname=account.fullname
                     req.session.kind=account.kind
+                    req.session.slug=account.slug
                     return res.redirect('/')
                 }
                 else{
@@ -61,7 +62,9 @@ const accountController={
     getAddInvoice:(req,res)=>{
         return res.render('accounts/invoice')
     },
-    postAddInvoice:(req,res)=>{},
+    postAddInvoice:(req,res)=>{
+        
+    },
 
     getDetails:(req,res)=>{
         const slugUrl=req.params.slug 
@@ -80,7 +83,13 @@ const accountController={
                 slug:account.slug,
             }
             console.log({data:data})
-            return res.render("accounts/details",{show:true,data:data})
+            return res.render("accounts/details",{
+                show:true,
+                data:data, 
+                fullname:req.session.fullname, 
+                admin:req.session.kind=="seller"?true:false,
+                slug:req.session.slug,
+            })
         })
     }
 }

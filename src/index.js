@@ -61,5 +61,5 @@ app.get('/',(req,res)=>{
     // {
     //     return res.render('home',{fullname:req.session.fullname?req.session.fullname:'Log in', kind:req.session.kind})
     // }
-    return res.render('home',{fullname:req.session.fullname})
+    return res.render('home',{fullname:req.session.fullname, admin:req.session.kind=="seller"?true:false,slug:req.session.slug})
 })
